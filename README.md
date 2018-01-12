@@ -3,5 +3,5 @@
 
 ## Pascal's Triangle
 
-- generator - prints out an 2d array 50 by 50
-- giveRow - prints out a specific row (from 1 to 50)
+- generator - prints out an 2d array 60 by 60
+- giveRow - prints out a specific row (from 1 to 60)
