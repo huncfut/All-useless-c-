@@ -3,10 +3,10 @@
 using namespace std;
 
 int main() {
-	long long int pasTri[50][50];
+	long long int pasTri[60][60];
 	pasTri[0][0] = 1;
 
-	cout << "long long int pasTri[][] = {{1,},";
+	cout << "long long int pasTri[60][60] = {{1,},";
 
 	for(int i = 1; i < 50; i++) {
 		pasTri[i][0] = 1;
@@ -20,7 +20,7 @@ int main() {
 			cout << pasTri[i][j] << ",";
 		}
 
-		cout << "1,},";
+		cout << "1},";
 	}
 
 	cout << "};" << endl;
