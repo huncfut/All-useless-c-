@@ -29,13 +29,6 @@ int main() {
 		}
 	}
 
-	for(short r = 0; r < row; r++) {
-		for(short c = 0; c < col; c++) {
-			printf("%hu ", yard[r][c]);
-		}
-		printf("\n");
-	}
-
 	printf("%hu\n", yard[row-1][col-1]);
 
 	return 0;
