@@ -1,35 +1,42 @@
 #include <cstdio>
 
 int main() {
-	int row, col;
-	scanf("%d %d", &row, &col);
-	short yard[row][col];
+	short row, col;
+	scanf("%hd %hd", &row, &col);
+	unsigned short yard[row][col];
 
 	// reading 2d array
-	for(int i = 0; i < row; i++) {
-		for(int j = 0; j < col; j++) {
-			scanf("%hd", &yard[i][j]);
+	for(short i = 0; i < row; i++) {
+		for(short j = 0; j < col; j++) {
+			scanf("%hu", &yard[i][j]);
 		}
 	}
 
 	// adding numbers in 1st row
-	for(int c = 1; c < col; c++) {
+	for(short c = 1; c < col; c++) {
 		yard[0][c] += yard[0][c-1];
 	}
 
 	// adding numbers in 1st column
-	for(int r = 0; r < row; r++) {
+	for(short r = 1; r < row; r++) {
 		yard[r][0] += yard[r-1][0];
 	}
 
 	// adding numbers in all other places
-	for(int r = 1; r < row; r++) {
-		for(int c = 1; c < col; c++) {
+	for(short r = 1; r < row; r++) {
+		for(short c = 1; c < col; c++) {
 			yard[r][c] += ((yard[r-1][c] > yard[r][c-1]) ? yard[r-1][c] : yard[r][c-1]);
 		}
 	}
 
-	printf("%hd\n", yard[row-1][col-1]);
+	for(short r = 0; r < row; r++) {
+		for(short c = 0; c < col; c++) {
+			printf("%hu ", yard[r][c]);
+		}
+		printf("\n");
+	}
+
+	printf("%hu\n", yard[row-1][col-1]);
 
 	return 0;
 }
