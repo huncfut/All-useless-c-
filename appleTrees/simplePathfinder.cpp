@@ -5,7 +5,7 @@ int main() {
 	scanf("%d %d", &row, &col);
 	short yard[row][col];
 
-	// reading table
+	// reading 2d array
 	for(int i = 0; i < row; i++) {
 		for(int j = 0; j < col; j++) {
 			scanf("%hd", &yard[i][j]);
